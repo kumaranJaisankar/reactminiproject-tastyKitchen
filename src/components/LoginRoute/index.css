@@ -100,7 +100,7 @@ input::placeholder {
     height: 100vh;
   }
   .form-container {
-    width: 50%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;

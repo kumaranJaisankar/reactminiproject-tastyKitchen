@@ -1,8 +1,16 @@
 import {Component} from 'react'
+import {Redirect} from 'react-router-dom'
+import Cookies from 'js-cookie'
 import './index.css'
 
 class LoginRoute extends Component {
   state = {username: '', password: '', isError: false, errorMsg: ''}
+
+  successLogin = jwtToken => {
+    const {history} = this.props
+    Cookies.set('jwt_token', jwtToken, {expires: 60})
+    history.replace('/')
+  }
 
   userLoginBtn = async event => {
     event.preventDefault()
@@ -15,7 +23,11 @@ class LoginRoute extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
+    if (response.ok === true) {
+      this.successLogin(data.jwt_token)
+    } else {
+      this.setState({isError: true, errorMsg: data.error_msg})
+    }
   }
 
   inputUserName = event => {
@@ -27,7 +39,11 @@ class LoginRoute extends Component {
   }
 
   render() {
-    const {username, password, isError} = this.state
+    const {username, password, isError, errorMsg} = this.state
+    const jwtToken = Cookies.get('jwt_token')
+    if (jwtToken !== undefined) {
+      return <Redirect to="/" />
+    }
     return (
       <>
         <div className="login-container">
@@ -69,11 +85,7 @@ class LoginRoute extends Component {
                   placeholder="Password"
                   className="input-style"
                 />
-                {isError && (
-                  <p className="error-msg">
-                    Please enter a valid Username & Password
-                  </p>
-                )}
+                {isError && <p className="error-msg">{errorMsg}</p>}
               </div>
               <button type="submit" className="login-btn">
                 Login

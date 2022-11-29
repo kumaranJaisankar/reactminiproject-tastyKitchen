@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import {Switch, Route} from 'react-router-dom'
 import LoginRoute from './components/LoginRoute'
+import HomeRoute from './components/HomeRoute'
 import './App.css'
 
 const sortByOptions = [
@@ -24,6 +25,7 @@ class App extends Component {
       <>
         <Switch>
           <Route exact path="/login" component={LoginRoute} />
+          <Route exact path="/" component={HomeRoute} />
         </Switch>
       </>
     )
