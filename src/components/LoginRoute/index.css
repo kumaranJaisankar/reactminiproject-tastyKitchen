@@ -1,0 +1,149 @@
+.login-container {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.desktop-view-image {
+  display: none;
+}
+.logo-assembly {
+  display: none;
+}
+.mobile-view-image {
+  position: relative;
+  width: 387px;
+  height: 387px;
+  left: 56px;
+  top: -38px;
+}
+.login-text-mob {
+  position: absolute;
+  width: 60px;
+  height: 32px;
+  left: 24px;
+  top: 296px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0f172a;
+  margin-left: 20px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  width: 66px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #475569;
+}
+.input-style {
+  height: 40px;
+  left: 0%;
+  right: 0%;
+  top: 24px;
+  width: 100%;
+  border: none;
+  background: #e2e8f0;
+  border-radius: 2px;
+}
+.form-container {
+  width: 90%;
+  margin-left: 50px;
+}
+.error-msg {
+  color: red;
+  padding: 0px;
+  margin: 0px;
+}
+input::placeholder {
+  padding: 10px;
+}
+.login-btn {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background: #f7931e;
+  height: 40px;
+  width: 312px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .mobile-view-image {
+    display: none;
+  }
+  .desktop-view-image {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+  }
+  .form-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-text-mob {
+    display: none;
+  }
+  .login-form {
+    width: 456px;
+    height: 561px;
+    left: 165px;
+    top: 231px;
+    background: #fefeff;
+    box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+  }
+  .logo-assembly {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .companey-name {
+    height: 32px;
+    left: 21.32%;
+    right: 66.74%;
+    top: calc(50% - 32px / 2 - 174px);
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #f7931e;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
