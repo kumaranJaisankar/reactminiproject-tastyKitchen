@@ -1,0 +1,90 @@
+.rest-image-size {
+  height: 100px;
+  width: 160px;
+  left: 925px;
+  top: 216px;
+  border-radius: 8px;
+}
+.rest-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.resturant-name {
+  height: 24px;
+  min-width: 68px;
+  left: 200px;
+  top: 827px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 0.2px;
+  color: #334155;
+}
+.list-rest-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.cuisine {
+  height: 16px;
+  min-width: 54px;
+  left: 200px;
+  top: 855px;
+  border-radius: nullpx;
+  color: #64748b;
+}
+.rate-ing {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #1e293b;
+  margin: 0px;
+  display: inline;
+}
+.ratings {
+  left: 67.22%;
+  right: 13.06%;
+  top: 46.51%;
+  bottom: 52.64%;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  /* Light / blue-gray / 500 */
+  color: #64748b;
+}
+.rating-cont {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 576px) {
+  .resturant-name {
+    width: 160px;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #334155;
+  }
+  .cuisine {
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #64748b;
+  }
+}

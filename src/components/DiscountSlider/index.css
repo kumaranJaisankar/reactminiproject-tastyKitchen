@@ -1,0 +1,26 @@
+.offer-list {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  width: 100%;
+  margin: 0px;
+}
+.carousal {
+  width: 100%;
+}
+.offer-image {
+  width: 100%;
+  height: 187.96px;
+}
+.loder-container {
+  width: 100%;
+  height: 187.96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 576px) {
+  .offer-image {
+    height: 250px;
+  }
+}

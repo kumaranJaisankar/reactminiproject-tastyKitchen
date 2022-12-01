@@ -49,7 +49,7 @@ class LoginRoute extends Component {
         <div className="login-container">
           <img
             src="https://res.cloudinary.com/dtbarluca/image/upload/v1669706256/Rectangle_1457_vqsdll.png"
-            alt="website logo"
+            alt="website login"
             className="mobile-view-image"
           />
           <div className="form-container">
@@ -94,7 +94,7 @@ class LoginRoute extends Component {
           </div>
           <img
             src="https://res.cloudinary.com/dtbarluca/image/upload/v1669705689/Rectangle_1456_evvwmw.png"
-            alt="website logo"
+            alt="website login"
             className="desktop-view-image"
           />
         </div>

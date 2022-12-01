@@ -1,0 +1,107 @@
+.popular-resturant-title {
+  left: 11.46%;
+  right: 66.81%;
+  top: 8.65%;
+  bottom: 84.86%;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  color: #183b56;
+}
+.popluar-resturant-container {
+  width: 85%;
+  margin-left: 25px;
+}
+.about-this-text {
+  left: 11.46%;
+  right: 50.56%;
+  top: 16.22%;
+  bottom: 80.54%;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #64748b;
+  margin-top: 0px;
+}
+.sort-text {
+  font-size: 16px;
+  line-height: 24px;
+  color: #64748b;
+  margin-top: 0px;
+}
+.filter-part {
+  display: flex;
+  align-items: baseline;
+}
+.filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sort-option {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  line-height: 24px;
+  color: #64748b;
+  outline: none;
+  cursor: pointer;
+}
+.line-break {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+}
+.restaurant-cart-list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.page-no {
+  left: 43.61%;
+  right: 43.89%;
+  top: 82.66%;
+  bottom: 16.07%;
+  font-family: 'Bree Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #334155;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pagination-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .filter-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .popluar-resturant-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .resturant-card-container {
+    width: 100%;
+    min-height: 450px;
+    margin-bottom: 15px;
+  }
+}

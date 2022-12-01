@@ -1,0 +1,20 @@
+.desktop-offer-view {
+  display: none;
+}
+.main-resturant-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 576px) {
+  .mobile-offer-view {
+    display: none;
+  }
+  .desktop-offer-view {
+    display: contents;
+  }
+  .resturant-container {
+    width: 70%;
+  }
+}
