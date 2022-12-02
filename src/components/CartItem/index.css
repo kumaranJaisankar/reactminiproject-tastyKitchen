@@ -1,0 +1,34 @@
+.cart-image {
+  height: 100px;
+  width: 136px;
+  left: 213px;
+  top: 224px;
+  border-radius: 8px;
+}
+.name {
+  left: 25.35%;
+  right: 65.28%;
+  top: 23.06%;
+  bottom: 74.82%;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height, or 120% */
+
+  letter-spacing: 0.2px;
+
+  color: #183b56;
+}
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.total-amount {
+  color: #f7931e;
+  font-weight: 500;
+}

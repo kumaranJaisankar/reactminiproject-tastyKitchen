@@ -76,6 +76,14 @@
   background-color: transparent;
   border: none;
 }
+sup {
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  border-radius: 10px;
+}
 
 @media screen and (min-width: 567px) {
   .mobile-view-menu {

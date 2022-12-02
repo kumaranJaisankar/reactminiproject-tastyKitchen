@@ -1,0 +1,112 @@
+.food-image-size {
+  height: 100px;
+  width: 160px;
+  left: 24px;
+  top: 284px;
+  border-radius: 5.0196075439453125px;
+}
+.food-content-text {
+  width: 150px;
+}
+.food-name {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0px;
+  text-align: left;
+  color: #334155;
+  height: 24px;
+  width: 130px;
+  left: 200px;
+  top: 287px;
+}
+.rating {
+  height: 18px;
+  width: 42px;
+  left: 216px;
+  top: 335px;
+  border-radius: nullpx;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.price {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #334155;
+  height: 16px;
+  width: 100px;
+  left: 200px;
+  top: 315px;
+}
+.food-list-align {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.add-button {
+  height: 23.586206436157227px;
+  width: 42.17241287231445px;
+  text-align: center;
+  border-radius: 5.793103218078613px;
+  border: 1.45px solid #ffa412;
+  color: #ffa412;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 576px) {
+  .food-image-size {
+    height: 150px;
+    width: 255px;
+    left: 165px;
+    top: 552px;
+    border-radius: 8px;
+  }
+  .price {
+    height: 24px;
+    width: 100px;
+    left: 450px;
+    top: 962px;
+    border-radius: nullpx;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #334155;
+  }
+  .food-name {
+    height: 24px;
+    width: 190px;
+    left: 1054px;
+    top: 566px;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: #334155;
+  }
+  .rating {
+    height: 16px;
+    width: 52px;
+    left: 1070px;
+    top: 631px;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}

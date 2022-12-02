@@ -1,0 +1,115 @@
+.restaurant-banner {
+  background-image: url('https://res.cloudinary.com/dtbarluca/image/upload/v1669961332/Frame_279_bttjxz.png');
+  background-size: cover;
+  width: 100%;
+  height: 188px;
+  position: relative;
+  padding: 10px;
+}
+.restaurant-details-loader {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurant-img-size {
+  position: relative;
+  width: 221px;
+  height: 162px;
+  left: -70px;
+  top: 0px;
+  border-radius: 360px;
+}
+.restur-name {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: white;
+  margin: 0px;
+}
+.cuisienee {
+  margin-top: 0px;
+  font-family: Roboto;
+  font-size: 10px;
+  width: 100px;
+  font-weight: 400;
+
+  letter-spacing: 0px;
+  text-align: left;
+  color: white;
+}
+.restaurant-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cu {
+  font-weight: 200 !important;
+}
+.rating-detail-ca {
+  display: flex;
+  justify-content: flex-start;
+}
+.hr {
+  margin: 10px;
+  height: 30px;
+}
+.food-detail-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.each-food-list {
+  list-style-type: none;
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 576px) {
+  .restaurant-banner {
+    height: 370px;
+  }
+  .each-food-list {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .restur-name {
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: white;
+  }
+  .cuisienee {
+    min-width: 200px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: white;
+  }
+  .restaurant-img-size {
+    position: none;
+    height: 280px;
+    width: 445px;
+    border-radius: 8px;
+  }
+}

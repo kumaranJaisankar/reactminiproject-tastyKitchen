@@ -1,21 +1,29 @@
-import {Component} from 'react'
+/* eslint-disable react/no-unknown-property */
 
 import './index.css'
 
-class Counter extends Component {
-  render() {
-    return (
-      <div>
-        <button type="button" onClick={this.onDecrement}>
-          -
-        </button>
-        <div>0</div>
-        <button type="button" onClick={this.onIncrement}>
-          +
-        </button>
-      </div>
-    )
+const Counter = props => {
+  const {quantity, increaseBtn, decreaseBtn} = props
+
+  const onIncrement = () => {
+    increaseBtn()
   }
+
+  const onDecrement = () => {
+    decreaseBtn()
+  }
+
+  return (
+    <div className="counter-count">
+      <button testid="decrement-count" type="button" onClick={onDecrement}>
+        -
+      </button>
+      <div testid="active-count">{quantity}</div>
+      <button testid="increment-count" type="button" onClick={onIncrement}>
+        +
+      </button>
+    </div>
+  )
 }
 
 export default Counter
