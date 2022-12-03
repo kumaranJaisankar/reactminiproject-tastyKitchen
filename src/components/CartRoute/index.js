@@ -40,7 +40,7 @@ class CartRoute extends Component {
                         alt="empty cart"
                         className="empty-cart-img"
                       />
-                      <h1 className="no-item">No Orders Yet!</h1>
+                      <h1 className="no-item">No Order Yet!</h1>
                       <p className="para-empty">
                         Your cart is empty. Add something from the menu.
                       </p>

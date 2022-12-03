@@ -45,11 +45,13 @@ class Header extends Component {
             <>
               <nav className="nav-bar">
                 <div className="logo-container">
-                  <img
-                    src="https://res.cloudinary.com/dtbarluca/image/upload/v1669706558/Frame_274_hsoezn.png"
-                    alt="website logo"
-                    className="logo-size"
-                  />
+                  <Link to="/" className="link-style ">
+                    <img
+                      src="https://res.cloudinary.com/dtbarluca/image/upload/v1669706558/Frame_274_hsoezn.png"
+                      alt="website logo"
+                      className="logo-size"
+                    />
+                  </Link>
                   <h1 className="companey-name-header">Tasty Kitchen</h1>
                 </div>
                 <ul className="nav-link-list-desktop">

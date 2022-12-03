@@ -15,7 +15,7 @@ const RestaurantsItem = props => {
           <p className="cuisine">{cuisine}</p>
           <div className="rating-cont">
             <AiFillStar color="#FFCC00" />
-            <h1 className="rate-ing">{rating}</h1>
+            <p className="rate-ing">{rating}</p>
             <p className="ratings">({totalReviews} ratings)</p>
           </div>
         </div>

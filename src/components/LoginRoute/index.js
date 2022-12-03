@@ -49,7 +49,7 @@ class LoginRoute extends Component {
         <div className="login-container">
           <img
             src="https://res.cloudinary.com/dtbarluca/image/upload/v1669706256/Rectangle_1457_vqsdll.png"
-            alt="website login"
+            alt="website logo"
             className="mobile-view-image"
           />
           <div className="form-container">
@@ -60,7 +60,7 @@ class LoginRoute extends Component {
                   alt="website logo"
                   className="logo-size"
                 />
-                <h1 className="companey-name">Tasty Kitchen</h1>
+                <h1 className="companey-name">Tasty Kitchens</h1>
                 <h1 className="login-text-desk">Login</h1>
               </div>
               <h1 className="login-text-mob">Login</h1>

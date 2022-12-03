@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import CartContext from './context/CartContext'
 import LoginRoute from './components/LoginRoute'
 import HomeRoute from './components/HomeRoute'
@@ -100,7 +100,8 @@ class App extends Component {
               path="/restaurant/:id"
               component={RestaurantDetails}
             />
-            <Route component={NotFound} />
+            <Route path="/bad-path" component={NotFound} />
+            <Redirect to="/bad-path" />
           </Switch>
         </>
       </CartContext.Provider>

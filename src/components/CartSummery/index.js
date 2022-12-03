@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import CartContext from '../../context/CartContext'
 import './index.css'
 
@@ -16,9 +17,11 @@ const CartSummery = props => {
         }
         return (
           <div className="order-summery">
-            <h1 className="total-order">Order Total : </h1>
+            <h1 className="total-order">Order Total: </h1>
             <div>
-              <h1 className="total-order">₹{currentToatal}</h1>
+              <p testid="total-price" className="total-order">
+                ₹{currentToatal}
+              </p>
               <button className="checkout-btn" type="button" onClick={checkOut}>
                 Place Order
               </button>

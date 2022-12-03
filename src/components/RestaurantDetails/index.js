@@ -94,14 +94,14 @@ class RestaurantDetails extends Component {
                 </p>
                 <div className="rating-detail-ca">
                   <div>
-                    <h2 className="cuisienee">
+                    <p className="cuisienee">
                       <AiFillStar color="white" /> {rating}
-                    </h2>
+                    </p>
                     <p className="cuisienee cu">{reviewsCount}+ Ratings</p>
                   </div>
                   <hr className="hr" />
                   <div>
-                    <h2 className="cuisienee">₹{costForTwo}</h2>
+                    <p className="cuisienee">₹{costForTwo}</p>
                     <p className="cuisienee cu">Cost for two</p>
                   </div>
                 </div>

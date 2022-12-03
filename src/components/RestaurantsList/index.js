@@ -124,7 +124,7 @@ class RestaurantsList extends Component {
         <div className="resturant-card-container">
           {isLoading && (
             // eslint-disable-next-line react/no-unknown-property
-            <div testid="restaurants-offers-loader" className="loder-container">
+            <div testid="restaurants-list-loader" className="loder-container">
               <Loader type="Bars" height="40" width="40" color="#f7931e" />
             </div>
           )}
