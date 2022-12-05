@@ -10,7 +10,7 @@ import './index.css'
 
 const sortByOptions = [
   {
-    id: 0,
+    id: 1,
     displayText: 'Highest',
     value: 'Highest',
   },
@@ -27,7 +27,7 @@ class RestaurantsList extends Component {
     isLoading: false,
     noOfPage: 0,
     activePage: 1,
-    sortOption: sortByOptions[1].value,
+    sortOption: sortByOptions[0].value,
   }
 
   componentDidMount() {
