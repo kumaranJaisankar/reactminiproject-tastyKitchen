@@ -90,6 +90,31 @@ button {
   cursor: pointer;
 }
 
+.search {
+  background-color: transparent;
+  height: 30px;
+  width: 280px;
+  border: none;
+  border-right: 1px solid orange;
+  margin-right: 10px;
+  outline: none;
+}
+.search::placeholder {
+  color: orange;
+}
+.search-container {
+  border: 1px solid orange;
+  border-radius: 8px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+}
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 576px) {
   .filter-container {
     flex-direction: row;

@@ -45,7 +45,8 @@ class FoodItemList extends Component {
               <img src={imageUrl} alt="food item" className="food-image-size" />
               <div className="food-content-text">
                 <h1 className="food-name">{name}</h1>
-                <p className="price">₹{cost}</p>
+                <span>₹</span>
+                <p className="price">{cost}</p>
                 <p className="rating">
                   <FaStar color="#FFCC00" />
                   {rating}

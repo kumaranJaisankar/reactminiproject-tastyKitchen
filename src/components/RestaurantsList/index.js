@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 import {Component} from 'react'
 import {BsFilterRight} from 'react-icons/bs'
-import {BiLeftArrow, BiRightArrow} from 'react-icons/bi'
+import {BiLeftArrow, BiRightArrow, BiSearchAlt2} from 'react-icons/bi'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import RestaurantsItem from '../RestaurantsItem'
@@ -10,7 +10,7 @@ import './index.css'
 
 const sortByOptions = [
   {
-    id: 0,
+    id: 1,
     displayText: 'Highest',
     value: 'Highest',
   },
@@ -28,6 +28,8 @@ class RestaurantsList extends Component {
     noOfPage: 0,
     activePage: 1,
     sortOption: sortByOptions[1].value,
+    searchRestaurant: '',
+    isAvaliable: false,
   }
 
   componentDidMount() {
@@ -35,11 +37,12 @@ class RestaurantsList extends Component {
   }
 
   getRestaurantList = async () => {
-    this.setState({isLoading: true})
-    const {activePage, sortOption} = this.state
-    const offSet = (activePage - 1) * 9
+    this.setState({isLoading: true, isAvaliable: false})
+    const {activePage, sortOption, searchRestaurant} = this.state
     const jwtToken = Cookies.get('jwt_token')
-    const apiUrl = `https://apis.ccbp.in/restaurants-list?search=&offset=${offSet}&limit=9&sort_by_rating=${sortOption}`
+    const limit = 9
+    const offSet = (activePage - 1) * limit
+    const apiUrl = `https://apis.ccbp.in/restaurants-list?search=${searchRestaurant}&offset=${offSet}&limit=${limit}&sort_by_rating=${sortOption}`
     const options = {
       method: 'GET',
       headers: {
@@ -49,7 +52,7 @@ class RestaurantsList extends Component {
     const response = await fetch(apiUrl, options)
     const data = await response.json()
     const totalRestaurants = data.total
-    const noOfPage = Math.ceil(totalRestaurants / 9)
+    const noOfPage = Math.ceil(totalRestaurants / limit)
     if (response.ok === true) {
       const formatedData = data.restaurants.map(each => ({
         id: each.id,
@@ -59,7 +62,14 @@ class RestaurantsList extends Component {
         rating: each.user_rating.rating,
         totalReviews: each.user_rating.total_reviews,
       }))
-      this.setState({restaurantList: formatedData, isLoading: false, noOfPage})
+      this.setState({
+        restaurantList: formatedData,
+        isLoading: false,
+        noOfPage,
+        isAvaliable: false,
+      })
+    } else {
+      this.setState({isLoading: false, isAvaliable: true})
     }
   }
 
@@ -76,6 +86,18 @@ class RestaurantsList extends Component {
       )
     }
   }
+
+  userSearch = event => {
+    this.setState({searchRestaurant: event.target.value})
+  }
+
+  enterKey = event => {
+    if (event.key === 'Enter') {
+      this.getRestaurantList()
+    }
+  }
+
+  searchbtn = () => this.getRestaurantList()
 
   nextPage = () => {
     const {activePage, noOfPage} = this.state
@@ -94,6 +116,8 @@ class RestaurantsList extends Component {
       sortOption,
       activePage,
       noOfPage,
+      searchRestaurant,
+      isAvaliable,
     } = this.state
 
     return (
@@ -122,13 +146,35 @@ class RestaurantsList extends Component {
         </div>
         <hr className="line-break" />
         <div className="resturant-card-container">
+          <div className="search-container">
+            <input
+              value={searchRestaurant}
+              type="search"
+              placeholder="Search Restaurants"
+              className="search"
+              onChange={this.userSearch}
+              onKeyDown={this.enterKey}
+            />
+            <button
+              type="button"
+              className="search-btn"
+              onClick={this.searchbtn}
+            >
+              <BiSearchAlt2 className="border" />
+            </button>
+          </div>
           {isLoading && (
             // eslint-disable-next-line react/no-unknown-property
             <div testid="restaurants-list-loader" className="loder-container">
               <Loader type="Bars" height="40" width="40" color="#f7931e" />
             </div>
           )}
-          {!isLoading && (
+          {isAvaliable && (
+            <div className="loder-container">
+              <h1>No Results!</h1>
+            </div>
+          )}
+          {!isLoading && !isAvaliable && (
             <ul className="restaurant-cart-list">
               {restaurantList.map(each => (
                 <RestaurantsItem key={each.id} restaurantDetails={each} />

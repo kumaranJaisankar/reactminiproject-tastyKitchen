@@ -26,8 +26,7 @@
   width: 42px;
   left: 216px;
   top: 335px;
-  border-radius: nullpx;
-  font-family: DM Sans;
+  font-family: 'DM Sans';
   font-size: 14px;
   font-weight: 700;
   line-height: 18px;
@@ -35,15 +34,15 @@
   text-align: left;
 }
 .price {
-  font-family: DM Sans;
+  display: inline;
+  font-family: 'DM Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0px;
   text-align: left;
   color: #334155;
-  height: 16px;
-  width: 100px;
+
   left: 200px;
   top: 315px;
 }
@@ -75,7 +74,6 @@
     width: 100px;
     left: 450px;
     top: 962px;
-    border-radius: nullpx;
     font-family: DM Sans;
     font-size: 16px;
     font-weight: 500;
