@@ -27,13 +27,9 @@ class RestaurantsList extends Component {
     isLoading: false,
     noOfPage: 0,
     activePage: 1,
-<<<<<<< HEAD
     sortOption: sortByOptions[1].value,
     searchRestaurant: '',
     isAvaliable: false,
-=======
-    sortOption: sortByOptions[0].value,
->>>>>>> baeab9f59f98d64bf2160982f77b776e48e8e84a
   }
 
   componentDidMount() {
